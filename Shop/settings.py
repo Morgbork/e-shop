@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'Goods',
     'cart',
     'orders',
+    'paypal.standard.ipn',
+    'payment',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +137,6 @@ MEDIA_URL = '/media/'
 
 
 CART_SESSION_ID = "cart"
+
+PAYPAL_RECEIVER_EMAIL = 'nikitaivlad@yandex.ru'
+PAYPAL_TEST = True

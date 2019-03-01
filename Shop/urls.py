@@ -22,7 +22,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('cart/', include(('cart.urls', 'cart'), namespace='cart')),
     path('', include(('Goods.urls', 'Goods'), namespace='Goods')),
+    path('payment/', include(('payment.urls', 'payment'), namespace='payment')),
     path('order/', include(('orders.urls', 'orders'), namespace='orders')),
+    path('paypal/', include('paypal.standard.ipn.urls')),
 ]
 
 if settings.DEBUG:
