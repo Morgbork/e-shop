@@ -11,7 +11,10 @@ def OrderCreate(request):
     if request.method == 'POST':
         form = OrderCreateForm(request.POST)
         if form.is_valid():
-            order = form.save()
+            order = form.save(commit=False)
+            if cart.cupon:
+                order.cupon = cart.cupon
+                order.discount = cart.cupon.discount
             for item in cart:
                 OrderItem.objects.create(order=order, product=item['product'], price=item['price'], quantity=item['quantity'])
             cart.clear() 
