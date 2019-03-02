@@ -22,10 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('cart/', include(('cart.urls', 'cart'), namespace='cart')),
     path('', include(('Goods.urls', 'Goods'), namespace='Goods')),
-<<<<<<< HEAD
     path('cupons/', include(('cupons.urls', 'cupons'), namespace='cupon')),
-=======
->>>>>>> 05f74e2887f8030af7242c6bf46b1af72701bd6e
     path('payment/', include(('payment.urls', 'payment'), namespace='payment')),
     path('order/', include(('orders.urls', 'orders'), namespace='orders')),
     path('paypal/', include('paypal.standard.ipn.urls')),
