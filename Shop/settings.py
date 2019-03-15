@@ -43,7 +43,15 @@ INSTALLED_APPS = [
     'paypal.standard.ipn',
     'payment',
     'cupons',
+    'analytics',
+    'marketing',
 ]
+
+# AUTH_USER_MODEL  = "shop_auth.User" 
+
+MAILCHIMP_API_KEY = "e42270eb0688447f2e3de3ae823a0e52-us20"
+MAILCHIMP_DATA_CENTER = "us20"
+MAILCHIMP_EMAIL_LIST_ID = "7ad3556958"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

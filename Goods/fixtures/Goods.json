@@ -1,0 +1,52 @@
+[
+{
+    "model": "Goods.category",
+    "pk": 1,
+    "fields": {
+        "name": "\u0422\u0435\u043b\u0435\u0432\u0438\u0437\u043e\u0440\u044b",
+        "slug": "televizory",
+        "specification": "\u0414\u0438\u0430\u0433\u043e\u043d\u0430\u043b\u044c"
+    }
+},
+{
+    "model": "Goods.category",
+    "pk": 2,
+    "fields": {
+        "name": "\u041a\u043e\u043c\u043f\u0443\u043a\u0442\u043e\u0440\u044b",
+        "slug": "kompuktory",
+        "specification": ""
+    }
+},
+{
+    "model": "Goods.product",
+    "pk": 1,
+    "fields": {
+        "category": 1,
+        "manufacturer": "Sony",
+        "name": "k40id",
+        "slug": "sony-k40id",
+        "description": "\u0425\u043e\u0440\u043e\u0448\u043e \u0441\u0434\u0435\u043b\u043e\u043b\u0438  \u0425\u043e\u0440\u043e\u0448\u043e \u0441\u0434\u0435\u043b\u043e\u043b\u0438  \u0425\u043e\u0440\u043e\u0448\u043e \u0441\u0434\u0435\u043b\u043e\u043b\u0438  \u0425\u043e\u0440\u043e\u0448\u043e \u0441\u0434\u0435\u043b\u043e\u043b\u0438  \u0425\u043e\u0440\u043e\u0448\u043e \u0441\u0434\u0435\u043b\u043e\u043b\u0438  \u0425\u043e\u0440\u043e\u0448\u043e \u0441\u0434\u0435\u043b\u043e\u043b\u0438  \u0425\u043e\u0440\u043e\u0448\u043e \u0441\u0434\u0435\u043b\u043e\u043b\u0438  \u0425\u043e\u0440\u043e\u0448\u043e \u0441\u0434\u0435\u043b\u043e\u043b\u0438  \u0425\u043e\u0440\u043e\u0448\u043e \u0441\u0434\u0435\u043b\u043e\u043b\u0438  \u0425\u043e\u0440\u043e\u0448\u043e \u0441\u0434\u0435\u043b\u043e\u043b\u0438  \u0425\u043e\u0440\u043e\u0448\u043e \u0441\u0434\u0435\u043b\u043e\u043b\u0438  \u0425\u043e\u0440\u043e\u0448\u043e \u0441\u0434\u0435\u043b\u043e\u043b\u0438  \u0425\u043e\u0440\u043e\u0448\u043e \u0441\u0434\u0435\u043b\u043e\u043b\u0438  \u0425\u043e\u0440\u043e\u0448\u043e \u0441\u0434\u0435\u043b\u043e\u043b\u0438",
+        "price": "228.00",
+        "stock": true,
+        "updated": "2019-02-27T17:49:11.596Z",
+        "specification": "",
+        "image": "products/2019/02/23/sony_son_40w5500_64428.jpg"
+    }
+},
+{
+    "model": "Goods.product",
+    "pk": 2,
+    "fields": {
+        "category": 2,
+        "manufacturer": "\u0412\u0430\u0441\u044f\u043d",
+        "name": "pekarnya",
+        "slug": "pekarnya",
+        "description": "\u0414\u0432\u0430 \u0433\u0438\u0433\u0430 \u0434\u0432\u0430 \u044f\u0434\u0440\u0430",
+        "price": "228.00",
+        "stock": true,
+        "updated": "2019-02-27T17:54:35.278Z",
+        "specification": "",
+        "image": "products/2019/02/27/wallhaven-630918.png"
+    }
+}
+]
