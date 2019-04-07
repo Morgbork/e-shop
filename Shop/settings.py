@@ -43,7 +43,15 @@ INSTALLED_APPS = [
     'paypal.standard.ipn',
     'payment',
     'cupons',
+    'analytics',
+    'marketing',
 ]
+
+# AUTH_USER_MODEL  = "shop_auth.User" 
+
+MAILCHIMP_API_KEY = "e42270eb0688447f2e3de3ae823a0e52-us20"
+MAILCHIMP_DATA_CENTER = "us20"
+MAILCHIMP_EMAIL_LIST_ID = "7ad3556958"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -53,6 +61,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'Shop.urls'
@@ -133,6 +142,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
 
@@ -141,3 +152,7 @@ CART_SESSION_ID = "cart"
 
 PAYPAL_RECEIVER_EMAIL = 'nikitaivlad@yandex.ru'
 PAYPAL_TEST = True
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
