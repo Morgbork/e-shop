@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 # Quick-start development settings - unsuitable for production
@@ -141,3 +141,15 @@ CART_SESSION_ID = "cart"
 
 PAYPAL_RECEIVER_EMAIL = 'nikitaivlad@yandex.ru'
 PAYPAL_TEST = True
+
+# Let's Encrypt ssl/tls https
+
+CORD_REPLACE_HTTPS_REFERER = False
+HOST_SCHEME = "https://"
+SECURE_PROXY_SSL_HEADER = None
+SECURE_SSL_REDIRECT = False
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
+SECURE_HSTS=INCLUDE_SUBDOMAINS = False
+SECURE_HSTS_SECONDS = None
+SECURE_FRAME_DENY = False
