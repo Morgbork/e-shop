@@ -1,5 +1,6 @@
 {% extends 'Goods/base.html' %}
-{% load static %}
+{% load static from staticfiles %}
+
 
 {% block title %}
   {% if category %} {{ category.name }} {% else %} Страница товаров {% endif %}
