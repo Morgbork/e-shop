@@ -61,6 +61,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'Shop.urls'
@@ -141,6 +142,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
 
@@ -149,3 +152,7 @@ CART_SESSION_ID = "cart"
 
 PAYPAL_RECEIVER_EMAIL = 'nikitaivlad@yandex.ru'
 PAYPAL_TEST = True
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
